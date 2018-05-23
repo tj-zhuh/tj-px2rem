@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <style>
+    textarea {
+      width: 800px;
+      height: 900px;
+      float: left;
+    }
+
+    .trans {
+      float: left;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .trans div {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 30px;
+      border: 1px solid #000;  /*no*/
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .trans input {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 30px;
+      border: 1px solid #000;
+      text-align: center;
+    }
+
+    #inputRemUnit {
+      margin-top:200px;
+    }
+
+    #tran1 {
+      margin-top: 200px;
+    }
+
+  </style>
+  <script src="./index.js"></script>
+  <script>
+    window.onload = function () {
+      var tran1 = document.getElementById('tran1');
+      tran1.addEventListener('click', function () {
+        translate({ ordered: true });
+      }, false)
+
+      
+      
+    }
+
+    console.log(px2rem);
+
+
+    function translate(options) {
+      var t1 = document.getElementById('t1');
+
+      var input = document.getElementById('inputRemUnit');
+      var unit = input.value;
+
+      // 清空右侧框
+      t2.value = '';
+      var text = t1.value;
+      var output = px2rem(text, unit);      
+      t2.value = output;
+    }
+  </script>
+</head>
+<body>
+  <textarea id="t1"></textarea>
+  <div class="trans">
+    <input id="inputRemUnit" type="text" value="100" />
+    <div id="tran1">Go</div>    
+  </div>
+  <textarea id="t2"></textarea>
+</body>
+</html>

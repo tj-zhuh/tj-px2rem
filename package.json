@@ -1,0 +1,41 @@
+{
+  "name": "tj-px2rem",
+  "version": "0.1.0",
+  "description": "输入一段css代码，将其中的px转化为rem并输出",
+  "main": "examples/index.js",
+  "scripts": {
+    "clean": "rimraf ./index.js",
+    "build": "npm run clean && webpack",
+    "prepublish": "npm run build",
+    "postpublish": "npm run clean"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhizao/tj-px2rem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhizao/tj-px2rem/issues"
+  },
+  "target": "web",
+  "node": {
+    "fs": "empty"
+  },
+  "homepage": "https://github.com/zhizao/tj-px2rem#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "css": "^2.2.1",
+    "extend": "^3.0.1"
+  }
+}
